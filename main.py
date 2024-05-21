@@ -1,4 +1,3 @@
-
 import agentql
 import time
 from playwright.sync_api import sync_playwright
@@ -19,12 +18,11 @@ load_dotenv()
 
 # Agent = LLM + memory(?) + planning skills(PDF?) + tool use(AgentQL)
 session = agentql.start_session("https://www.google.com")
-page = session # This is the main page
 
-# Launch the browser
-session = agentql.start_session("https://www.google.com")
-page = session 
+time.sleep(1)
 
-session.page.screenshot(path='screenshot.png')
+session.current_page.screenshot(path='screenshot.png')
+time.sleep(1)
+
 
 session.stop()
