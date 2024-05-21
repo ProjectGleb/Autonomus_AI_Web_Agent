@@ -1,23 +1,17 @@
-Hey, this is an agent aiming to reinvent task automation. 
+Hey, this is multi-agent system aiming to automate digital labour. 
 
-1. It takes a scribe recording of the desktop
-    1.1 What are my options? Scribe doesnt have an api, meaning I likely have to manually trigger it every time through:
-        web-scraping scirpt triggering scribe recording and then manually downloading the recoding after
-    2. Create my own screenshotting software to take screenshots of the scibte 
+This agent has two funcitons:
+1) Learning how to perform tasks trought a desktop recording tutorial (currently using scribe, but will soon use video looms!) 
+2) Automatically figure out how to perform web tasks based on a text prompt.
 
-2. Feeds it into Claud
-3. Claud creates a breakdown of the UI elements in each screenshot and creates a readable format for AgenQL to execute upon
-4. Agent QL then executes upon these descriptions
+The way it works is:
+1)
+1. Once you create a screen recording (using scribe or loom) it transcribes it using GPTv into actionable steps.
+2. It parses it thorugh AgentQL which begins a browser sesssion, grabs retrieves web elements to be interacted with.
+3. Interacts with the retrieved elements
 
-"How to safely store an api key"
-from dotenv import load_dotenv
-load_dotenv()
-import os
-KEY = os.environ["AGENTQL_API_KEY"]
-
-
-"creating a conda env ""
-conda create -n agent_env
-
- history 
- "for displaying command history"
+2) 
+1. Based on the text query the agent constructs a plan of how to accomplish the goal.
+3. It begins the browser session and transcribes it's screenshots using GPTv
+4. The transcription then gets parsed by the LLM into AgentQL Query that then interacts with the web-page.
+5. The changing we-state then gets re-analyzed against the goal and the cycle begins again.
