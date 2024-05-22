@@ -5,10 +5,9 @@ import json
 import os
 import requests
 load_dotenv()
+from step0_user_goal import get_user_input
 
-def get_user_input():
-    user_goal = input("What would you like to achieve? ")
-    return user_goal
+user_goal = get_user_input()
 
 def agent_planning(user_goal):
     # activate chatGPT agent
@@ -24,7 +23,7 @@ def agent_planning(user_goal):
     }
 
     data = {
-        "model": "gpt-3.5-turbo",
+        "model": "gpt-4-turbo",
         "messages": [
             {
                 "role": "system",
@@ -63,6 +62,5 @@ def agent_planning(user_goal):
         print("Error:", response.status_code, response.text)
 
 
-user_goal = get_user_input()
 agent_planning(user_goal)
 

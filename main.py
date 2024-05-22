@@ -7,10 +7,13 @@ import os
 load_dotenv()
 
 '''
-1. GOAL (create github repo)
-2. CHECK MEMOORY {actions}, {plans}, {goals}
-3. MAKE PLAN {1 action}
-5. EXECTURE
+1. GOAL (create github repo) √
+2. CONSTRUCT A STEP BY STEP PLAN 
+3. TRANSCRIBE THE SCREENSHOT {outline interactive elements} √
+    3.2 SAVE TO MEMORY
+4.1 CHECK ACTION MEMORY,
+    4.2  MAKE 1 ACTION PLAN
+5. EXECUTE (USE AGENTQL)
 6. SAVE TO MEMORY {goal, action, outcome}
 
 '''
