@@ -64,3 +64,31 @@ def agent_planning(user_goal):
 
 agent_planning(user_goal)
 
+
+
+
+
+# Planning output:
+"""
+PLAN:
+1. Type "github.com" into the search box.
+2. Click on the search button.
+3. Click on the first search result to navigate to GitHub.
+4. Click on the "Sign in" button.
+5. Type in the GitHub username.
+6. Type in the GitHub password.
+7. Click on the "Sign in" button to log into GitHub.
+8. Click on the "+" icon at the top right corner of the GitHub homepage.
+9. Click on "New repository" from the dropdown menu.
+10. Type "Name" for the repository in the repository name field.
+11. Type "Description" for the repository in the description field (optional).
+12. Click on "Public" to set the repository visibility to public (or click on “Private” if preferred).
+13. Scroll to the "Initialize this repository with:" section.
+14. Click on the checkbox next to "Add a README file" (optional).
+15. Click on the checkbox next to "Add .gitignore" and select "Python" from the dropdown.
+16. Click on the checkbox next to "Choose a license" and select a license from the dropdown (optional).
+17. Click on the "Create repository" button.
+18. End."""
+
+# Take a step, logg it, in steps completed, and mark as complete in the plan
+

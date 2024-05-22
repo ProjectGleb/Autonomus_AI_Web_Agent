@@ -3,21 +3,12 @@ import os
 import warnings
 from crewai import Agent, Task, Crew
 load_dotenv()
+
 # OCR TEXT OUTPUT. Needs to be taken and split into two parts, interractive elements and screen info, which could be then reused. 
 
-#GPT for sheets similar to anthropic sheets but withaaq more triggered
-"""
-1. Grab the screen
-2. Highlight the screen context in context of the user goal
-3. Highlight the interactive elements
-Create steps taken. 
-2. """
 
 def crew_planning(user_goal, interactive_elements, past_actions):
 
-    Example_plan = """ 
-
-    """
     warnings.filterwarnings("ignore")
 
     get_openai_api_key = os.getenv("OPENAI_API_KEY")

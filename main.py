@@ -5,6 +5,18 @@ import json
 from dotenv import load_dotenv
 import os
 load_dotenv()
+from Autonomus_Logic.step0_user_goal import get_user_input
+from Autonomus_Logic.step1_planning import agent_planning
+from Autonomus_Logic.step2_ocr import screenshot_ocr
+from Autonomus_Logic.step3_planning_crew import crew_planning
+
+
+
+user_goal = get_user_input() #Get user query
+plan = agent_planning(user_goal) #Make a step by step plan 
+screenshot_content = screenshot_ocr(user_goal) #Transcribe the screenshot
+crew_script = crew_planning(user_goal, screenshot_content, past actions???)
+
 
 '''
 1. GOAL (create github repo) √
@@ -17,6 +29,7 @@ load_dotenv()
 6. SAVE TO MEMORY {goal, action, outcome}
 
 '''
+
 
 
 # Agent = LLM + memory(?) + planning skills(PDF?) + tool use(AgentQL)
